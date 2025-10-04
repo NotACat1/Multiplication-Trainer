@@ -77,7 +77,7 @@ fun MultiplicationTrainerApp() {
             Button(
                 onClick = {
                     val intent = Intent(context, AllNumbersActivity::class.java)
-                    startActivity(context, intent, null)
+                    context.startActivity(intent)
                 },
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -110,7 +110,7 @@ fun MultiplicationTrainerApp() {
                         val intent = Intent(context, SelectiveActivity::class.java).apply {
                             putExtra("SELECTED_NUMBER", number)
                         }
-                        startActivity(context, intent, null)
+                        context.startActivity(intent)
                     }
                 },
                 modifier = Modifier.fillMaxWidth(),
